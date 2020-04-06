@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+    background-color: #e5e5e5;
+    color: #24282B;
+}
+.fat {
+    background: #ff5E84;
+    color: white;
+}
+button {
+    border: none;
+    font-weight: bold;
+    background: none;
+    color: #ff5E84;
+}

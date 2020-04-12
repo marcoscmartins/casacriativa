@@ -14,3 +14,25 @@ function onOff() {
         .classList
         .toggle("addScroll")
 }
+function checkFields(event) {
+    // console.log(event);
+    const valuesToCheck = [
+        "title",
+        "image",
+        "category",
+        "description",
+        "link"
+    ];
+    const isEmpty = valuesToCheck.find((value) => {
+        const isString = typeof event.target[value].value === 'string';
+        const isEmpty = !event.target[value].value.trim();
+        if (isString && isEmpty) {
+            return true;
+        }
+    });
+
+    if (isEmpty) {
+        event.preventDefault();
+        alert('Preencha todos os campos.');
+    }
+}
